@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>언남초등학교 방송부 홈페이지</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-color: #2e7d32; /* 언남초 상징색 계열 (초록) */
+            --bg-color: #ffffff;
+            --text-color: #37352f;
+            --card-bg: #f7f6f3;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+
+        /* Notion 스타일 컨테이너 */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 1px solid #e9e9e8;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .school-info {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .emoji {
+            margin-right: 15px;
+        }
+
+        /* 섹션 스타일 */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            border-bottom: 1px solid #e9e9e8;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* 카드 레이아웃 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: var(--main-color);
+        }
+
+        /* 방송 시간표 스타일 */
+        .schedule-box {
+            background: #e7f3ef;
+            padding: 20px;
+            border-left: 5px solid var(--main-color);
+            border-radius: 4px;
+        }
+
+        /* 멤버 리스트 */
+        .member-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .member-list li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .member-list li::before {
+            content: "🎙️";
+            margin-right: 10px;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding: 40px 0;
+            border-top: 1px solid #eee;
+            font-size: 0.8em;
+            color: #888;
+            text-align: center;
+        }
+
+        .vision-tag {
+            display: inline-block;
+            background: #f1f1ef;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="school-info">경기도용인교육지원청 · 언남초등학교</div>
+            <h1><span class="emoji">🎬</span> EBS (Eunnam Broadcasting System)</h1>
+            <p><strong>"행복한 꿈을 키우며 함께 성장하는 언남의 목소리"</strong></p>
+            <div class="vision-tag">교목: 은행나무 | 교화: 개나리</div>
+        </header>
+
+        <section>
+            <h2>✨ 방송부 소개</h2>
+            <p>언남초등학교 방송부는 학교의 모든 소식과 행사의 중심에서 활약하는 자율 동아리입니다. 6학년 학생 6명이 주축이 되어 창의적이고 책임감 있는 태도로 학교 현장을 생생하게 전달합니다.</p>
+        </section>
+
+        <section>
+            <h2>⏰ 아침 생방송 안내</h2>
+            <div class="schedule-box">
+                <p>매일 아침, 전교생의 즐거운 하루를 여는 방송을 진행합니다.</p>
+                <p><strong>방송 시간:</strong> <span class="highlight">오전 08:10 — 08:50</span></p>
+                <p><strong>주요 내용:</strong> 아침 명상 음악, 주요 공지사항, 등교길 캠페인 등</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>👥 방송부 멤버 (6학년)</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>방송 제작팀</h3>
+                    <ul class="member-list">
+                        <li>멤버 1 (팀장)</li>
+                        <li>멤버 2</li>
+                        <li>멤버 3</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>아나운싱 & 기술팀</h3>
+                    <ul class="member-list">
+                        <li>멤버 4</li>
+                        <li>멤버 5</li>
+                        <li>멤버 6</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📅 주요 활동 및 행사</h2>
+            <p>언남초 방송부는 학교의 '약방의 감초'처럼 모든 중요한 순간에 함께합니다.</p>
+            <div class="grid">
+                <div class="card">
+                    <span class="emoji">🌟</span>
+                    <h3>언남꿈끼나래공연</h3>
+                    <p><strong>매달 1회 실시</strong><br>학생들의 꿈과 재능을 마음껏 펼치는 공연의 음향과 영상 송출을 전담합니다.</p>
+                </div>
+                <div class="card">
+                    <span class="emoji">🏫</span>
+                    <h3>학교 공식 행사</h3>
+                    <p>입학식, 졸업식, 종업식, 방학식 및 학부모 총회 등 학교의 대규모 행사를 지원합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>언남초등학교: 경기도 용인시 기흥구 구성로 118</p>
+            <p>© 2024 Eunnam Elementary School Broadcasting Club. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
