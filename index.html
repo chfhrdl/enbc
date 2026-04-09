@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --main-color: #2e7d32; /* 언남초 상징색 계열 (초록) */
+            --main-color: #2e7d32; 
             --bg-color: #ffffff;
             --text-color: #37352f;
             --card-bg: #f7f6f3;
@@ -22,7 +22,6 @@
             background-color: var(--bg-color);
         }
 
-        /* Notion 스타일 컨테이너 */
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -52,7 +51,6 @@
             margin-right: 15px;
         }
 
-        /* 섹션 스타일 */
         section {
             margin-bottom: 50px;
         }
@@ -64,7 +62,6 @@
             margin-bottom: 20px;
         }
 
-        /* 카드 레이아웃 */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -78,8 +75,18 @@
             transition: transform 0.2s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
+        .member-card {
+            text-align: center;
+        }
+
+        .member-photo {
+            width: 100px;
+            height: 120px;
+            background-color: #ddd;
+            margin: 0 auto 10px;
+            border-radius: 4px;
+            object-fit: cover;
+            display: block;
         }
 
         .highlight {
@@ -87,7 +94,6 @@
             color: var(--main-color);
         }
 
-        /* 방송 시간표 스타일 */
         .schedule-box {
             background: #e7f3ef;
             padding: 20px;
@@ -95,22 +101,42 @@
             border-radius: 4px;
         }
 
-        /* 멤버 리스트 */
         .member-list {
             list-style: none;
             padding: 0;
+            text-align: left;
         }
 
         .member-list li {
-            padding: 10px;
+            padding: 8px 0;
             border-bottom: 1px solid #eee;
             display: flex;
             align-items: center;
+            font-size: 0.95em;
         }
 
-        .member-list li::before {
-            content: "🎙️";
-            margin-right: 10px;
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .article-content {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
         }
 
         footer {
@@ -121,15 +147,6 @@
             color: #888;
             text-align: center;
         }
-
-        .vision-tag {
-            display: inline-block;
-            background: #f1f1ef;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            margin-top: 10px;
-        }
     </style>
 </head>
 <body>
@@ -137,61 +154,77 @@
     <div class="container">
         <header>
             <div class="school-info">경기도용인교육지원청 · 언남초등학교</div>
-            <h1><span class="emoji">🎬</span> EBS (Eunnam Broadcasting System)</h1>
+            <h1><span class="emoji">🎬</span> ENBC (Eunnam Broadcasting Club)</h1>
             <p><strong>"행복한 꿈을 키우며 함께 성장하는 언남의 목소리"</strong></p>
-            <div class="vision-tag">교목: 은행나무 | 교화: 개나리</div>
         </header>
-
-        <section>
-            <h2>✨ 방송부 소개</h2>
-            <p>언남초등학교 방송부는 학교의 모든 소식과 행사의 중심에서 활약하는 자율 동아리입니다. 6학년 학생 6명이 주축이 되어 창의적이고 책임감 있는 태도로 학교 현장을 생생하게 전달합니다.</p>
-        </section>
-
-        <section>
-            <h2>⏰ 아침 생방송 안내</h2>
-            <div class="schedule-box">
-                <p>매일 아침, 전교생의 즐거운 하루를 여는 방송을 진행합니다.</p>
-                <p><strong>방송 시간:</strong> <span class="highlight">오전 08:10 — 08:50</span></p>
-                <p><strong>주요 내용:</strong> 아침 명상 음악, 주요 공지사항, 등교길 캠페인 등</p>
-            </div>
-        </section>
 
         <section>
             <h2>👥 방송부 멤버 (6학년)</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>방송 제작팀</h3>
+                <div class="card member-card">
+                    <h3>🛠 엔지니어</h3>
                     <ul class="member-list">
-                        <li>멤버 1 (팀장)</li>
-                        <li>멤버 2</li>
-                        <li>멤버 3</li>
+                        <li>
+                            <img src="6-1_홍재인.png" alt="홍재인" class="member-photo">
+                            홍재인 (실장)
+                        </li>
+                        <li>
+                            <img src="6-1_김서아.png" alt="김서아" class="member-photo">
+                            김서아
+                        </li>
                     </ul>
                 </div>
-                <div class="card">
-                    <h3>아나운싱 & 기술팀</h3>
+                <div class="card member-card">
+                    <h3>🎙 아나운서</h3>
                     <ul class="member-list">
-                        <li>멤버 4</li>
-                        <li>멤버 5</li>
-                        <li>멤버 6</li>
+                        <li>
+                            <img src="6-1_노우림.png" alt="노우림" class="member-photo">
+                            노우림
+                        </li>
+                        <li>
+                            <img src="6-3_이수안.png" alt="이수안" class="member-photo">
+                            이수안
+                        </li>
+                    </ul>
+                </div>
+                <div class="card member-card">
+                    <h3>📹 카메라</h3>
+                    <ul class="member-list">
+                        <li>
+                            <img src="6-1_정아연.png" alt="정아연" class="member-photo">
+                            정아연 (부실장)
+                        </li>
+                        <li>
+                            <img src="6-3_강효주.png" alt="강효주" class="member-photo">
+                            강효주
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>📅 주요 활동 및 행사</h2>
-            <p>언남초 방송부는 학교의 '약방의 감초'처럼 모든 중요한 순간에 함께합니다.</p>
-            <div class="grid">
-                <div class="card">
-                    <span class="emoji">🌟</span>
-                    <h3>언남꿈끼나래공연</h3>
-                    <p><strong>매달 1회 실시</strong><br>학생들의 꿈과 재능을 마음껏 펼치는 공연의 음향과 영상 송출을 전담합니다.</p>
-                </div>
-                <div class="card">
-                    <span class="emoji">🏫</span>
-                    <h3>학교 공식 행사</h3>
-                    <p>입학식, 졸업식, 종업식, 방학식 및 학부모 총회 등 학교의 대규모 행사를 지원합니다.</p>
-                </div>
+        <section id="performance">
+            <h2>🌟 제1회 언남꿈끼나래공연 현장 취재</h2>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/-xxRGP7OByg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="article-content">
+                <h3>[보도] "우리들의 재능이 피어나다" 제1회 꿈끼나래공연 성료</h3>
+                <p><strong>언남초등학교 ENBC 기자단</strong></p>
+                <hr>
+                <p>
+                    <strong>(누가)</strong> 언남초등학교 학생들이 
+                    <strong>(언제)</strong> 지난 공연 당일, 
+                    <strong>(어디서)</strong> 교내 강당에서 열린 
+                    <strong>(무엇을)</strong> '제1회 언남꿈끼나래공연'을 통해 자신의 재능을 마음껏 뽐냈습니다.
+                </p>
+                <p>
+                    <strong>(어떻게/왜)</strong> 이번 공연은 학생들이 가진 소중한 꿈과 끼를 친구들 앞에서 발표함으로써 자신감을 기르고 즐거운 학교 문화를 만들기 위해 기획되었습니다. 
+                    동영상 속 학생들은 그동안 갈고닦은 악기 연주, 댄스, 노래 등 다채로운 무대를 선보였으며, ENBC 방송부는 생생한 현장을 학교 곳곳에 전달하기 위해 음향과 영상 송출에 최선을 다했습니다.
+                </p>
+                <p>관객석을 가득 채운 친구들의 박수 소리와 함께 제1회 공연은 성황리에 마무리되었습니다.</p>
             </div>
         </section>
 
